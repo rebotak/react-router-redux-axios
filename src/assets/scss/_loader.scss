@@ -1,0 +1,16 @@
+.loader {
+	.fa-spinner{
+		color: #d93d3d;
+		font-size: 60px;
+	}
+	.fa-spin{
+    animation: fa-spin .666s infinite linear;
+	}
+	.bounce{
+		animation: bounce .5s infinite;
+	}
+}
+
+.d-flex.align-items-center.justify-content-center {
+    min-height: 500px;
+}

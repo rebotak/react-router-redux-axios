@@ -1,0 +1,22 @@
+.header{
+  .navbar{
+    &.navbar-light {
+      background: transparent;
+      border-bottom: 1px solid gainsboro;
+      position: relative;
+      width: 100%;
+      z-index: 999;
+
+      .navbar-brand{
+        img{
+          height: 38px;
+        }
+      }
+      .navbar-toggler{
+        border: none;
+        padding: 15px 0;
+        border: none;
+      }
+    }
+  }
+}

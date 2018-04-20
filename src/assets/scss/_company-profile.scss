@@ -1,0 +1,37 @@
+.profile-page{
+  .form-profile-wrapper{
+    padding-top: 40px;
+  }
+  .zip-form,
+  .province-form{
+    flex:1;
+  }
+	*{
+		transition: all ease-in .2s;
+	}
+}
+
+form.asking-form {
+  padding: 25px 15px;
+  padding-top: 30px;
+  border-radius: 2px;
+  border: 1px gainsboro solid;
+}
+
+.askus-components{
+  position: relative;
+
+  h5 {
+    position: absolute;
+    top: -13px;
+    left: 15px;
+    padding: 0 10px;
+    background: white;
+  }
+}
+
+.company-form.col-sm-6 {
+  padding: 15px 12px;
+  background: ghostwhite;
+  box-shadow: 1px 2px 5px rgba(0,0,0,.17);
+}
