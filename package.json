@@ -1,5 +1,5 @@
 {
-  "name": "get-dress-react",
+  "name": "react-router-redux-axios-boiler-plate",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -48,11 +48,13 @@
     "react-router-dom": "^4.2.2",
     "react-router-redux": "next",
     "react-showdown": "^1.6.0",
+    "react-toastify": "^4.0.0-rc.4",
     "reactstrap": "^5.0.0-beta.2",
     "redux": "^3.7.2",
     "redux-async-connect": "^1.0.0-rc4",
     "redux-axios-middleware": "^4.0.0",
     "redux-connect": "^7.0.0",
+    "redux-form": "^7.3.0",
     "redux-thunk": "^2.2.0",
     "style-loader": "0.19.0",
     "sw-precache-webpack-plugin": "0.11.4",
@@ -64,7 +66,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rebotak/get-dress-react-.git"
+    "url": "git+https://github.com/rebotak/react-router-redux-axios.git"
   },
   "author": "Pais Rebotak <rebotak@gmail.com> (http://about.me/rebotak)",
   "scripts": {

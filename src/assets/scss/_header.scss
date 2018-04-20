@@ -1,36 +1,22 @@
 .header{
   .navbar{
     &.navbar-light {
-      background: white;
+      background: transparent;
       border-bottom: 1px solid gainsboro;
-      padding: 0;
-      position: fixed;
-      top: 0;
+      position: relative;
       width: 100%;
       z-index: 999;
-    }
-    .mobile-container {
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 10px;
-      margin: 0 auto;
-      .navbar-toggler{
-        border: none;
-      }
+
       .navbar-brand{
         img{
           height: 38px;
         }
-      } 
+      }
+      .navbar-toggler{
+        border: none;
+        padding: 15px 0;
+        border: none;
+      }
     }
-  }
-  .stucker{
-    height: 50px;
-    display: block;
-    background: transparent;
-    width: 100%;
   }
 }

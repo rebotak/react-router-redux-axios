@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const client = axios.create({
-  baseURL: `https://localhost:3001`,
+  baseURL: `https://post-method-a9c8d.firebaseio.com`,
   responseType: 'json'
 });
 
