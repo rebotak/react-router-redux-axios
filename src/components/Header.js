@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
-// import logo from '../assets/img/logo.png';
+import logo from '../assets/img/logo.jpg';
 
 class Header extends Component {
   constructor(props) {
@@ -16,14 +16,14 @@ class Header extends Component {
     });
   }
   render() {
-    // const {} = this.state;
+    const {} = this.props;
     return (
       <div className="header">
       <div className="stucker">&nbsp;</div>
         <Navbar color="faded" light>
-          <div className="mobile-container">
+          <div className="container">
             <NavbarBrand href="/" className="mr-auto">
-            {/*<img src={logo} alt=""/>*/}
+            <img src={logo} alt=""/>
             </NavbarBrand>
             <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             <Collapse isOpen={!this.state.collapsed} navbar>
