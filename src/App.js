@@ -1,6 +1,6 @@
 import React from 'react';
 import './assets/scss/main.css';
-import './assets/scss/font-awesome.min.css';
+// import './assets/scss/font-awesome.min.css';
 import CompanyProfile from './containers/CompanyProfile';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
