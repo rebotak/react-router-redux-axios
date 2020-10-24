@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import {reduxForm, Field} from 'redux-form';
+import { reduxForm, Field } from 'redux-form';
 import {
   Button,
   FormGroup,
   Label,
 } from 'reactstrap';
-import {submit as submitAskUs} from '../reducers/askus';
-import {connect} from 'react-redux';
-import {toast} from 'react-toastify';
+import { submit as submitAskUs } from '../reducers/askus';
+import { connect } from 'react-redux';
+import { toast } from 'react-toastify';
 import Loader from '../components/Loader';
 
 
@@ -16,9 +16,9 @@ import Loader from '../components/Loader';
     askData: state.askus.data,
     askSubmiting: state.askus.submiting,
     askSubmited: state.askus.submited,
-  }),{
-    submitAskUs
-  }
+  }), {
+  submitAskUs
+}
 )
 
 @reduxForm(
@@ -48,7 +48,13 @@ class AskUs extends Component {
       askSubmiting,
       askSubmited
     } = this.props;
-
+    const modSubmit = (data) => {
+      console.log(data)
+      submitAskUs(data).then(res => {
+        toast.success('Questions asked!')
+      });
+      // reset();
+    }
     return (
       <div className="askus-components">
         <h5 className="text-danger">Ask Us</h5>
@@ -58,12 +64,12 @@ class AskUs extends Component {
           </div>
         }
         {!askSubmiting &&
-          <form className="asking-form" onSubmit={handleSubmit((data) => {
-            submitAskUs(data).then( res => {
-              toast.success('Questions asked!')
-            })
-            reset()
-            })}>
+          <form className="asking-form"
+            onSubmit={
+              handleSubmit((data) => {
+                modSubmit(data);
+              })
+            }>
             <FormGroup>
               <Label for="exampleSelect">Division</Label>
               <Field name="division" placeholder="Select Division" className="form-control" component="select">
@@ -81,7 +87,7 @@ class AskUs extends Component {
 
             <FormGroup>
               <Label for="questions">Questions</Label>
-              <Field placeholder="Questions" name="questions" component="textarea"  className="form-control" />
+              <Field placeholder="Questions" name="questions" component="textarea" className="form-control" />
             </FormGroup>
             {askSubmited &&
               <FormGroup>
