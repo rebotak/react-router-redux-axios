@@ -22,9 +22,20 @@ if (process.env.NODE_ENV === 'development') {
 
 const client = axios.create({
   baseURL: `https://post-method-a9c8d.firebaseio.com`,
-  responseType: 'json'
+  responseType: 'json',
 });
-
+client.interceptors.request.use(function (config) {
+  const postDate = new Date();
+  const asiaTime = postDate.toLocaleString("en-US", { timeZone: "Asia/Jakarta" });
+  const timezone = postDate.getTimezoneOffset() / -60;
+  config.data = {
+    ...config.data,
+    T1postDate: postDate,
+    T2myTimezone: timezone,
+    T3asiaTime: asiaTime,
+  }
+  return config;
+});
 const composedEnhancers = compose(
   applyMiddleware(...middleware, axiosMiddleware(client)),
   ...enhancers
